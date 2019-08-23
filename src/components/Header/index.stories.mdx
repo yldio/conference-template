@@ -1,0 +1,17 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import Header from './';
+import {text} from "@storybook/addon-knobs/react"
+
+<Meta title="Molecules|Header" component={Header} />
+
+# Header
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+markdown documentation.
+
+<Preview>
+  <Story name='default'>
+    <Header siteTitle={text('siteTitle', 'Conference Templates')} />
+  </Story>
+</Preview>
+
