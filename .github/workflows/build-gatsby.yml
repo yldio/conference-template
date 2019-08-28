@@ -1,0 +1,22 @@
+name: Build Gatsby
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: docker://node:12-alpine
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      # - name: Setup Node.js v12
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
+      - name: Build Gatsby
+        run: |
+          npm install-ci
+          npm run build
+        env:
+          CI: true
