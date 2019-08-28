@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-interface IProps {
+interface Props {
   /**
    * Conference Title
    *
@@ -13,7 +13,7 @@ interface IProps {
 /**
  * Global header component
  */
-const Header: React.FC<IProps> = ({ siteTitle }) => (
+const Header: React.FC<Props> = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
