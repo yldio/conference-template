@@ -2,6 +2,9 @@ import { configure, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
+import registerRequireContextHook from 'babel-plugin-require-context-hook/register';
+
+registerRequireContextHook();
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
@@ -20,6 +23,11 @@ addDecorator(withA11y);
 addDecorator(withKnobs);
 
 configure(
-  require.context('../src', true, /(.*)(\.*)stories\.(js|ts|md)x*/),
+  global.__requireContext(
+    __dirname,
+    '../src',
+    true,
+    /(.*)(\.*)stories\.(js|ts|md)x*/,
+  ),
   module,
 );

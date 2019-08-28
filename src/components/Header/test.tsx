@@ -4,7 +4,7 @@ import Header from './';
 
 import '@testing-library/jest-dom/extend-expect';
 
-describe('Example', () => {
+describe('Header', () => {
   it(`renders siteTitle`, () => {
     const siteTitle = `Hello World`;
     const { getByText } = render(<Header siteTitle={siteTitle} />);

@@ -4,8 +4,6 @@ import React from 'react';
 interface Props {
   /**
    * Conference Title
-   *
-   * default ""
    */
   siteTitle: string;
 }
