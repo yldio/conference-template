@@ -19,4 +19,7 @@ window.___navigate = pathname => {
 addDecorator(withA11y);
 addDecorator(withKnobs);
 
-configure(require.context('../src', true, /\.stories\.(mdx|tsx)$/), module);
+configure(
+  require.context('../src', true, /(.*)(\.*)stories\.(js|ts|md)x*/),
+  module,
+);
