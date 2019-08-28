@@ -15,8 +15,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-typescript`, 
-    `gatsby-plugin-tslint`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.(js|ts)x?$/,
+        exclude: /(node_modules|.cache|public)/,
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,4 +43,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from '../../components/Header/';
 
-interface IProps {
-  title: string
+interface Props {
+  title: string;
 }
 
-export default ({title}:IProps) => (
+const FarFuture: React.SFC<Props> = ({ title }) => (
   <div>
     <Header siteTitle={title} />
-</div>
+  </div>
 );
+
+export default FarFuture;
