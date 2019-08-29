@@ -1,0 +1,39 @@
+import {Meta, Story, Preview, Props, Description} from '@storybook/addon-docs/blocks'
+import {text, addDecorator} from '@storybook/addon-knobs/react'
+import { action } from '@storybook/addon-actions';
+import Button from './'
+import {ThemeProvider} from 'theme-ui'
+import defaultTheme from '../../themes/default'
+
+<Meta title="Atoms|Button" component={Button} />
+
+# Button
+
+The button abstract a HTML `<button>` element, with styles according to the
+theme being used.  It's ideal to be used in actions, like forms, or part of a
+UI interaction.
+
+> Don't use the `Button` component to represent links to other pages.
+
+<Preview withToolbar>
+  <Story name="default" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
+      <Button onClick={action('onClick')}>{text('children', 'Hello World')}</Button>
+  </Story>
+</Preview>
+
+<Props of={Button} />
+
+## Variants
+
+<Preview> 
+  <Story name="Dark Variant" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
+    <Button variant="dark">{text('children', 'Hello World')}</Button>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Light Variant" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
+    <Button variant="light">{text('children', 'Hello World')}</Button>
+  </Story>
+</Preview>
+

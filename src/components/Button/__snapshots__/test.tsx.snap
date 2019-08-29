@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot 1`] = `
+<button
+  class="css-0"
+>
+  Hello World
+</button>
+`;
