@@ -1,0 +1,2 @@
+name: 'ESlint Runner Action'
+description: 'Run ESLint in parallel of CI build'

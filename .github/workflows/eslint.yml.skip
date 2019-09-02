@@ -1,0 +1,19 @@
+name: Run ESLint
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Run ESLint
+        run: |
+          npm install-ci
+          npm run lint
+        env:
+          CI: true

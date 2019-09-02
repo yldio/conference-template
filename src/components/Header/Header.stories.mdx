@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import Header from './';
-import {text} from "@storybook/addon-knobs/react"
+import { text } from '@storybook/addon-knobs/react';
 
 <Meta title="Molecules|Header" component={Header} />
 
@@ -12,8 +12,7 @@ markdown documentation.
 <Props of={Header} />
 
 <Preview>
-  <Story name='default'>
+  <Story name="default">
     <Header siteTitle={text('siteTitle', 'Conference Templates')} />
   </Story>
 </Preview>
-

@@ -1,0 +1,36 @@
+---
+name: Sanity
+on: pull_request
+
+jobs:
+  install_dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+          HUSKY_SKIP_INSTALL: true
+
+  eslint:
+    needs: ['install_dependencies']
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
+      - name: Annotated ESLint
+        uses: rkusa/eslint-action@1.0.0
+        with:
+          args: '--ext=ts,tsx,js,jsx src'
+
+  prettier:
+    needs: ['install_dependencies']
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
+      - name: Prettier
+        run: npm run prettier-check

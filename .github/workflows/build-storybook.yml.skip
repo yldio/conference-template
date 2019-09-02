@@ -1,0 +1,19 @@
+name: Build Storybook
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Build Storybook
+        run: |
+          npm install-ci
+          npm run build-storybook
+        env:
+          CI: true

@@ -68,12 +68,13 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
     "type-check": "tsc --noEmit",
-    "lint": "tslint --project .",
+    "lint": "eslint --ext=js,jsx,ts,tsx src",
+    "prettier-check": "prettier -c \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
