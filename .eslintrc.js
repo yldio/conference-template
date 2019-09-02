@@ -22,5 +22,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  rules: {},
+  rules: {
+    'react/prop-types': false,
+  },
 };
