@@ -7,6 +7,13 @@ const colors = {
   darkerGray: '#333',
 };
 
+const headingsDefaults = {
+  fontFamily: 'heading',
+  fontWeight: 'heading',
+  lineHeight: 'heading',
+  color: 'primary',
+};
+
 export default {
   breakpoints: ['375px', '768px', '900px', '1280px'],
   borders: [0, 2],
@@ -36,7 +43,7 @@ export default {
 
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.142,
   },
 
   // Elements
@@ -45,6 +52,40 @@ export default {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeigth: 'body',
+      color: 'primary',
+    },
+    h1: {
+      ...headingsDefaults,
+      fontSize: 5,
+    },
+    h2: {
+      ...headingsDefaults,
+      fontWeight: 'body',
+      fontSize: 4,
+    },
+    h3: {
+      ...headingsDefaults,
+      fontSize: 3,
+    },
+    h4: {
+      ...headingsDefaults,
+      fontSize: 2,
+    },
+    h5: {
+      ...headingsDefaults,
+      fontSize: 1,
+    },
+    h6: {
+      fontSize: 0,
+      ...headingsDefaults,
+    },
+  },
+  headings: {
+    light: {
+      color: 'white',
+    },
+    dark: {
+      color: 'primary',
     },
   },
   buttons: {

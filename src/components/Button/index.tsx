@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { jsx } from 'theme-ui';
-
-export enum Variants {
-  Light = 'light',
-  Dark = 'dark',
-}
+import { Variants } from '../shared/definitions';
 
 interface Props {
   /**
@@ -14,7 +10,6 @@ interface Props {
    */
   variant?: Variants;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
-  children: React.ReactNode;
 }
 
 const Button: React.SFC<Props> = ({ children, variant, onClick }) => (
@@ -26,5 +21,7 @@ const Button: React.SFC<Props> = ({ children, variant, onClick }) => (
 Button.defaultProps = {
   variant: Variants.Dark,
 };
+
+export { Variants };
 
 export default Button;

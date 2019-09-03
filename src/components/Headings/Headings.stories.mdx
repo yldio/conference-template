@@ -1,0 +1,48 @@
+import {Meta, Story, Preview, Props, Description} from '@storybook/addon-docs/blocks'
+import {text, addDecorator} from '@storybook/addon-knobs/react'
+import { action } from '@storybook/addon-actions';
+import {H1, H2, H3, H4, H5, H6, Variants} from './'
+import {ThemeProvider} from 'theme-ui'
+import defaultTheme from '../../themes/default'
+
+<Meta 
+title="Atoms|Headings" 
+  component={H1} 
+  decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}
+/>
+
+# Headings
+
+<Preview withToolbar isColumn>
+  <Story name="h1">
+    <H1>Quick brown fox jumped over the lazy dog</H1>
+  </Story>
+  <Story name="h2">
+    <H2>Quick brown fox jumped over the lazy dog</H2>
+  </Story>
+  <Story name="h3">
+    <H3>Quick brown fox jumped over the lazy dog</H3>
+  </Story>
+  <Story name="h4">
+    <H4>Quick brown fox jumped over the lazy dog</H4>
+  </Story>
+  <Story name="h5">
+    <H5>Quick brown fox jumped over the lazy dog</H5>
+  </Story>
+  <Story name="h6">
+    <H6>Quick brown fox jumped over the lazy dog</H6>
+  </Story>
+</Preview>
+
+<Props of={H1} />
+
+## Variants
+
+<Preview>
+  <Story name="Dark Variant">
+    <H1 variant={Variants.Dark}>Quick brown fox jumped over the lazy dog</H1>
+  </Story>
+  <Story name="Light Variant">
+    <H1 variant={Variants.Light}>Quick brown fox jumped over the lazy dog</H1>
+  </Story>
+</Preview>
