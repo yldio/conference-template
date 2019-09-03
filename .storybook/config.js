@@ -1,4 +1,4 @@
-import { configure, addDecorator } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
@@ -18,6 +18,12 @@ window.___navigate = pathname => {
 
 addDecorator(withA11y);
 addDecorator(withKnobs);
+addParameters({
+  backgrounds: [
+    { name: 'twitter', value: '#00aced', default: true },
+    { name: 'facebook', value: '#3b5998' },
+  ],
+});
 
 configure(
   require.context('../src', true, /(.*)(\.*)stories\.(js|ts|md)x*/),

@@ -1,14 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Button from './';
+import Button, { Variants } from './';
 
 // add custom jest matchers from jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
 describe.only('Button', () => {
   it('snapshot', () => {
-    const { container } = render(<Button>Hello World</Button>);
+    const { container } = render(
+      <Button variant={Variants.Dark}>Hello World</Button>,
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
