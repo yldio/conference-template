@@ -1,11 +1,15 @@
 import {Meta, Story, Preview, Props, Description} from '@storybook/addon-docs/blocks'
 import {text, addDecorator} from '@storybook/addon-knobs/react'
 import { action } from '@storybook/addon-actions';
-import Button from './'
+import Button, {Variants} from './'
 import {ThemeProvider} from 'theme-ui'
 import defaultTheme from '../../themes/default'
 
-<Meta title="Atoms|Button" component={Button} />
+<Meta 
+  title="Atoms|Button" 
+  component={Button} 
+  decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}
+/>
 
 # Button
 
@@ -16,7 +20,7 @@ UI interaction.
 > Don't use the `Button` component to represent links to other pages.
 
 <Preview withToolbar>
-  <Story name="default" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
+  <Story name="default">
       <Button onClick={action('onClick')}>{text('children', 'Hello World')}</Button>
   </Story>
 </Preview>
@@ -25,15 +29,13 @@ UI interaction.
 
 ## Variants
 
-<Preview> 
-  <Story name="Dark Variant" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
-    <Button variant="dark">{text('children', 'Hello World')}</Button>
+<Preview withToolbar> 
+  <Story name="Dark Variant">
+    <Button variant={Variants.Dark}>{text('children', 'Hello World')}</Button>
+  </Story>
+  <Story name="Light Variant"> 
+    <Button variant={Variants.Light}>{text('children', 'Hello World')}</Button>
   </Story>
 </Preview>
 
-<Preview>
-  <Story name="Light Variant" decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}>
-    <Button variant="light">{text('children', 'Hello World')}</Button>
-  </Story>
-</Preview>
 

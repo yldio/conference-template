@@ -3,11 +3,16 @@
 import React from 'react';
 import { jsx } from 'theme-ui';
 
+export enum Variants {
+  Light = 'light',
+  Dark = 'dark',
+}
+
 interface Props {
   /**
-   * There two variants for the default theme
+   * Variant: either Light or Dark, it can be imported from the Variants enum
    */
-  variant?: 'light' | 'dark';
+  variant?: Variants;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   children: React.ReactNode;
 }
@@ -19,7 +24,7 @@ const Button: React.SFC<Props> = ({ children, variant, onClick }) => (
 );
 
 Button.defaultProps = {
-  variant: 'dark',
+  variant: Variants.Dark,
 };
 
 export default Button;
