@@ -1,0 +1,32 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import {text, select} from '@storybook/addon-knobs/react'
+import Hero, {Variants} from './'
+import {ThemeProvider} from 'theme-ui'
+import defaultTheme from '../../themes/default'
+
+<Meta 
+title="Organism|Hero" 
+component={Hero} 
+decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}
+/>
+
+# Hero
+
+The major header of the website, most likely the first component that visitors will see.
+
+It should display the conference title, description and date.
+
+I can happen to have an image on the right side.
+
+It's present on all website pages, except the ones with legal text.
+
+<Preview>
+  <Story name="default">
+    <Hero 
+      title={text('title', 'Conference Name')} 
+      description={text('description', 'A conference for every React developer where women take the stage' )}
+      date={text('date', 'London, UK. May 2009')}
+      variant={select('variant', Variants, Variants.Dark)}
+    />
+  </Story>
+</Preview>
