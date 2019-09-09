@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -16,17 +18,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-eslint`,
-      options: {
-        test: /\.(js|ts)x?$/,
-        exclude: /(node_modules|.cache|public)/,
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-eslint`,
+    //   options: {
+    //     test: /\.(js|ts)x?$/,
+    //     exclude: /(node_modules|.cache|public)/,
+    //     options: {
+    //       emitWarning: true,
+    //       failOnError: false,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,6 +41,29 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        environment: process.env.ENV === 'dev' ? 'development' : 'master',
+        ...(process.env.ENV === 'dev'
+          ? { host: `preview.contentful.com` }
+          : {}),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`400`, `500`, `700`],
+          },
+        ],
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
