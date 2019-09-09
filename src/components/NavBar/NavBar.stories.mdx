@@ -1,0 +1,30 @@
+import {Meta, Story, Preview, Props, Description} from '@storybook/addon-docs/blocks'
+import {text, addDecorator} from '@storybook/addon-knobs/react'
+import { action } from '@storybook/addon-actions';
+import NavBar from './'
+import {ThemeProvider} from 'theme-ui'
+import defaultTheme from '../../themes/default'
+
+<Meta 
+  title="Organisms|NavBar" 
+  component={NavBar} 
+  decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}
+/>
+
+# NavBar
+
+Top-level navigation, fixed to the top of the user's window.
+
+This is indicated for wide screens like desktop and large tablets. 
+
+It's always accompanied by a 48px height image with the conference/yld brand
+logo.
+
+<Preview withToolbar>
+  <Story name="default">
+    <NavBar />
+  </Story>
+</Preview>
+
+<Props of={NavBar} />
+

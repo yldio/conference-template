@@ -53,6 +53,8 @@ export default {
       lineHeight: 'body',
       fontWeigth: 'body',
       color: 'primary',
+      m: 0,
+      p: 0,
     },
     h1: {
       ...headingsDefaults,
@@ -78,6 +80,21 @@ export default {
     h6: {
       fontSize: 0,
       ...headingsDefaults,
+    },
+    ul: {
+      listStyle: 'none',
+      p: 0,
+      m: 0,
+    },
+    li: {
+      listStyle: 'none',
+      p: 0,
+      m: 0,
+    },
+    a: {
+      ...headingsDefaults,
+      color: 'primary',
+      textDecoration: 'none',
     },
   },
   headings: {

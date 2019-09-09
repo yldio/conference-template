@@ -1,0 +1,24 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import {text} from '@storybook/addon-knobs/react'
+import FarFuture from './'
+import {ThemeProvider} from 'theme-ui'
+import defaultTheme from '../../themes/default'
+
+<Meta 
+title="Templates|Far Future" 
+component={FarFuture} 
+decorators={[(storyFn) => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>]}
+/>
+
+# Far Future
+
+This page represents the conference website in a moment when there are no
+speakers nor sponsors defined yet.
+
+<Preview>
+  <Story name="default">
+  <FarFuture title={text('title', 'Conference Template')}
+  description={text('description', 'A conference for every React developer where women take the stage')}
+  />
+  </Story>
+</Preview>
