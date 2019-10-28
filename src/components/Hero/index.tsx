@@ -17,7 +17,7 @@ interface Props {
  * Some components might get independent variants.
  * So we need to ensure that we convert Hero Variants into Heading Variants
  */
-const getHeadingVariant = (variant: Variants = Variants.Dark) => {
+const getHeadingVariant = (variant: Variants = Variants.Dark): Variants => {
   switch (variant) {
     case Variants.Light:
       return HeadingsVariants.Light;

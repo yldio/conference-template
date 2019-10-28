@@ -17,12 +17,13 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    jest: 'readonly',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
   },
   rules: {
-    'react/prop-types': false,
+    'react/prop-types': 0,
   },
 };

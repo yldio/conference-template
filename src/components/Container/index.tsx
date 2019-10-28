@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui';
 const Container: React.SFC = ({ children }) => (
   <div
     sx={{
-      width: theme => ['100%'].concat(theme.breakpoints),
+      width: (theme): Array<string> => ['100%'].concat(theme.breakpoints),
       mx: 'auto',
     }}
   >

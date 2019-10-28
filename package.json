@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@mdx-js/react": "^1.4.0",
+    "@types/react-helmet": "^5.0.13",
     "gatsby": "^2.15.3",
     "gatsby-image": "^2.2.16",
     "gatsby-plugin-manifest": "^2.2.13",
@@ -74,7 +75,7 @@
     "serve": "gatsby serve",
     "test": "jest",
     "type-check": "tsc --noEmit",
-    "lint": "tslint --project .",
+    "lint": "eslint .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
