@@ -1,0 +1,29 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Description,
+} from '@storybook/addon-docs/blocks';
+import { text, addDecorator } from '@storybook/addon-knobs/react';
+import { action } from '@storybook/addon-actions';
+import { BodyPrimary } from './BodyPrimary';
+// import { ThemeProvider } from 'theme-ui';
+// import defaultTheme from '../../themes/default';
+import StorybookTheme from '../../themes/storybook';
+
+<Meta
+  title="Atoms|Typography"
+  decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
+/>
+
+# Headings
+
+<Preview withToolbar isColumn>
+  <Story name="BodyPrimary">
+    <>
+      <BodyPrimary>Quick brown fox jumped over the lazy dog</BodyPrimary>
+      <BodyPrimary bold>This is a bold BodyPrimary</BodyPrimary>
+    </>
+  </Story>
+</Preview>
