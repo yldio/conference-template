@@ -27,13 +27,15 @@ export default {
     secondary: colors.lighterGray,
     accent: colors.darkGray,
     muted: colors.lighterGray,
+    reverse: colors.white,
   },
 
   // Typography
-  fontSizes: [17, 18, 24, 26, 32, 42],
+  fontSizes: [13, 15, 17, 18, 24, 26, 32, 42],
   fonts: {
     body: 'Roboto, sans-serif',
     heading: 'Roboto, sans-serif',
+    mono: 'PT Mono, sans-serif',
   },
   fontWeights: {
     body: 400,

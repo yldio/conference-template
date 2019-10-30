@@ -8,8 +8,7 @@ import {
 import { text, addDecorator } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { BodyPrimary } from './BodyPrimary';
-// import { ThemeProvider } from 'theme-ui';
-// import defaultTheme from '../../themes/default';
+import { BodyStylised } from './BodyStylised';
 import StorybookTheme from '../../themes/storybook';
 
 <Meta
@@ -22,8 +21,20 @@ import StorybookTheme from '../../themes/storybook';
 <Preview withToolbar isColumn>
   <Story name="BodyPrimary">
     <>
-      <BodyPrimary>Quick brown fox jumped over the lazy dog</BodyPrimary>
+      <BodyPrimary>The quick brown fox jumped over the lazy dog</BodyPrimary>
       <BodyPrimary bold>This is a bold BodyPrimary</BodyPrimary>
+      <BodyPrimary color="reverse">This is a reverse BodyPrimary</BodyPrimary>
+      <BodyPrimary color="muted">This is a muted BodyPrimary</BodyPrimary>
+    </>
+  </Story>
+  <Story name="BodyStylised">
+    <>
+      <BodyStylised>The quick brown fox jumped over the lazy dog</BodyStylised>
+      <BodyStylised bold>This is a bold BodyStylised</BodyStylised>
+      <BodyStylised color="reverse">
+        This is a reverse BodyStylised
+      </BodyStylised>
+      <BodyStylised color="muted">This is a muted BodyStylised</BodyStylised>
     </>
   </Story>
 </Preview>
