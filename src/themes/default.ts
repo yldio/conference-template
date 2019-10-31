@@ -17,7 +17,20 @@ const headingsDefaults = {
 export default {
   breakpoints: ['375px', '768px', '900px', '1280px'],
   borders: [0, 2],
-  space: [0, 6, 12, 18, 24, 36, 54, 72, 108, 144],
+  space: [
+    0, // 0
+    6, // 1
+    11, // 2
+    12, // 3
+    13, // 4
+    18, // 5
+    24, // 6
+    36, // 7
+    54, // 8
+    72, // 9
+    108, // 10
+    144, // 11
+  ],
 
   // Colors
   colors: {
@@ -31,7 +44,18 @@ export default {
   },
 
   // Typography
-  fontSizes: [13, 15, 17, 18, 24, 26, 32, 42],
+  fontSizes: [
+    13, // 0
+    15, // 1
+    17, // 2
+    18, // 3
+    21, // 4
+    24, // 5
+    26, // 6
+    32, // 7
+    36, // 8
+    42, // 9
+  ],
   fonts: {
     body: 'Roboto, sans-serif',
     heading: 'Roboto, sans-serif',
@@ -44,8 +68,11 @@ export default {
   },
 
   lineHeights: {
-    body: 1.5,
-    heading: 1.142,
+    bodySmall: '18px',
+    body: '24px',
+    cardTitle: '30px',
+    heading: '36px',
+    sectionTitle: '48px',
   },
 
   // Elements
@@ -53,7 +80,7 @@ export default {
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
-      fontWeigth: 'body',
+      fontWeight: 'body',
       color: 'primary',
       m: 0,
       p: 0,

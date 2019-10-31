@@ -8,15 +8,12 @@ interface BodyStylisedProps extends ModifierProps {
   small: boolean;
 }
 
-export const BodyStylised: React.SFC<BodyStylisedProps> = ({
-  small,
-  ...props
-}) => (
+const BodyStylised: React.SFC<BodyStylisedProps> = ({ small, ...props }) => (
   <Styled.p
     sx={{
       fontFamily: 'mono',
       fontSize: small ? [0] : [1],
-      lineHeight: 'body',
+      lineHeight: small ? 'bodySmall' : 'body',
       paddingY: 3,
       ...modifiers(props),
     }}
@@ -24,3 +21,5 @@ export const BodyStylised: React.SFC<BodyStylisedProps> = ({
     {props.children}
   </Styled.p>
 );
+
+export default BodyStylised;

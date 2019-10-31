@@ -4,7 +4,7 @@ import React from 'react';
 import { Styled, jsx } from 'theme-ui';
 import { modifiers, ModifierProps } from './utils/modifiers';
 
-export const BodyPrimary: React.SFC<ModifierProps> = props => (
+const BodyPrimary: React.SFC<ModifierProps> = props => (
   <Styled.p
     sx={{
       fontFamily: 'body',
@@ -17,3 +17,5 @@ export const BodyPrimary: React.SFC<ModifierProps> = props => (
     {props.children}
   </Styled.p>
 );
+
+export default BodyPrimary;

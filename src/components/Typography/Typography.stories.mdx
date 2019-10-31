@@ -7,8 +7,9 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { text, addDecorator } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
-import { BodyPrimary } from './BodyPrimary';
-import { BodyStylised } from './BodyStylised';
+import BodyPrimary from './BodyPrimary';
+import BodyStylised from './BodyStylised';
+import CardTitle from './CardTitle';
 import StorybookTheme from '../../themes/storybook';
 
 <Meta
@@ -35,6 +36,24 @@ import StorybookTheme from '../../themes/storybook';
         This is a reverse BodyStylised
       </BodyStylised>
       <BodyStylised color="muted">This is a muted BodyStylised</BodyStylised>
+      <BodyStylised small>This is BodyStylised small</BodyStylised>
+      <BodyStylised small bold>
+        This is a bold BodyStylised small
+      </BodyStylised>
+      <BodyStylised small color="reverse">
+        This is a reverse BodyStylised small
+      </BodyStylised>
+      <BodyStylised small color="muted">
+        This is a muted BodyStylised smalll
+      </BodyStylised>
+    </>
+  </Story>
+  <Story name="CardTitle">
+    <>
+      <CardTitle>The quick brown fox jumped over the lazy dog</CardTitle>
+      <CardTitle bold>This is a bold CardTitle</CardTitle>
+      <CardTitle color="reverse">This is a reverse CardTitle</CardTitle>
+      <CardTitle color="muted">This is a muted CardTitle</CardTitle>
     </>
   </Story>
 </Preview>
