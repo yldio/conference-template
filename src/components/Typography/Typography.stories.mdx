@@ -10,6 +10,7 @@ import { action } from '@storybook/addon-actions';
 import BodyPrimary from './BodyPrimary';
 import BodyStylised from './BodyStylised';
 import CardTitle from './CardTitle';
+import DisplayTitle from './DisplayTitle';
 import StorybookTheme from '../../themes/storybook';
 
 <Meta
@@ -54,6 +55,26 @@ import StorybookTheme from '../../themes/storybook';
       <CardTitle bold>This is a bold CardTitle</CardTitle>
       <CardTitle color="reverse">This is a reverse CardTitle</CardTitle>
       <CardTitle color="muted">This is a muted CardTitle</CardTitle>
+    </>
+  </Story>
+  <Story name="DisplayTitle">
+    <>
+      <DisplayTitle>The quick brown fox jumped over the lazy dog</DisplayTitle>
+      <DisplayTitle bold>This is a bold DisplayTitle</DisplayTitle>
+      <DisplayTitle color="reverse">
+        This is a reverse DisplayTitle
+      </DisplayTitle>
+      <DisplayTitle color="muted">This is a muted DisplayTitle</DisplayTitle>
+      <DisplayTitle small>This is DisplayTitle small</DisplayTitle>
+      <DisplayTitle small bold>
+        This is a bold DisplayTitle small
+      </DisplayTitle>
+      <DisplayTitle small color="reverse">
+        This is a reverse DisplayTitle small
+      </DisplayTitle>
+      <DisplayTitle small color="muted">
+        This is a muted DisplayTitle smalll
+      </DisplayTitle>
     </>
   </Story>
 </Preview>

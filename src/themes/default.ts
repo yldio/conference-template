@@ -70,7 +70,7 @@ export default {
   lineHeights: {
     bodySmall: '18px',
     body: '24px',
-    cardTitle: '30px',
+    headingSmall: '30px',
     heading: '36px',
     sectionTitle: '48px',
   },
