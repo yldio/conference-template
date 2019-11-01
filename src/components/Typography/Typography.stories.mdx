@@ -8,30 +8,42 @@ import {
 import { text, addDecorator } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import BodyPrimary from './BodyPrimary';
+import SubTitle from './SubTitle';
 import BodyStylised from './BodyStylised';
 import CardTitle from './CardTitle';
 import DisplayTitle from './DisplayTitle';
+import SectionTitle from './SectionTitle';
 import StorybookTheme from '../../themes/storybook';
+import BackgroundWrapper from './utils/BackgroundWrapper';
 
 <Meta
   title="Atoms|Typography"
   decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
 />
 
-# Headings
-
 <Preview withToolbar isColumn>
   <Story name="BodyPrimary">
     <>
-      <BodyPrimary>The quick brown fox jumped over the lazy dog</BodyPrimary>
+      <BodyPrimary>This is a BodyPrimary</BodyPrimary>
       <BodyPrimary bold>This is a bold BodyPrimary</BodyPrimary>
-      <BodyPrimary color="reverse">This is a reverse BodyPrimary</BodyPrimary>
+      <BackgroundWrapper>
+        <BodyPrimary color="reverse">This is a reverse BodyPrimary</BodyPrimary>
+      </BackgroundWrapper>
       <BodyPrimary color="muted">This is a muted BodyPrimary</BodyPrimary>
+    </>
+  </Story>
+  <Story name="SubTitle">
+    <>
+      <SubTitle>This is a Subtitle</SubTitle>
+      <BackgroundWrapper>
+        <SubTitle color="reverse">This is a reverse SubTitle</SubTitle>
+      </BackgroundWrapper>
+      <SubTitle color="muted">This is a muted SubTitle</SubTitle>
     </>
   </Story>
   <Story name="BodyStylised">
     <>
-      <BodyStylised>The quick brown fox jumped over the lazy dog</BodyStylised>
+      <BodyStylised>This is a BodyStylised</BodyStylised>
       <BodyStylised bold>This is a bold BodyStylised</BodyStylised>
       <BodyStylised color="reverse">
         This is a reverse BodyStylised
@@ -41,9 +53,11 @@ import StorybookTheme from '../../themes/storybook';
       <BodyStylised small bold>
         This is a bold BodyStylised small
       </BodyStylised>
-      <BodyStylised small color="reverse">
-        This is a reverse BodyStylised small
-      </BodyStylised>
+      <BackgroundWrapper>
+        <BodyStylised small color="reverse">
+          This is a reverse BodyStylised small
+        </BodyStylised>
+      </BackgroundWrapper>
       <BodyStylised small color="muted">
         This is a muted BodyStylised smalll
       </BodyStylised>
@@ -51,30 +65,36 @@ import StorybookTheme from '../../themes/storybook';
   </Story>
   <Story name="CardTitle">
     <>
-      <CardTitle>The quick brown fox jumped over the lazy dog</CardTitle>
+      <CardTitle>This is a CardTitle</CardTitle>
       <CardTitle bold>This is a bold CardTitle</CardTitle>
-      <CardTitle color="reverse">This is a reverse CardTitle</CardTitle>
+      <BackgroundWrapper>
+        <CardTitle color="reverse">This is a reverse CardTitle</CardTitle>
+      </BackgroundWrapper>
       <CardTitle color="muted">This is a muted CardTitle</CardTitle>
     </>
   </Story>
   <Story name="DisplayTitle">
     <>
-      <DisplayTitle>The quick brown fox jumped over the lazy dog</DisplayTitle>
+      <DisplayTitle>This is a DisplayTitle</DisplayTitle>
       <DisplayTitle bold>This is a bold DisplayTitle</DisplayTitle>
-      <DisplayTitle color="reverse">
-        This is a reverse DisplayTitle
-      </DisplayTitle>
+      <BackgroundWrapper>
+        <DisplayTitle color="reverse">
+          This is a reverse DisplayTitle
+        </DisplayTitle>
+      </BackgroundWrapper>
       <DisplayTitle color="muted">This is a muted DisplayTitle</DisplayTitle>
-      <DisplayTitle small>This is DisplayTitle small</DisplayTitle>
-      <DisplayTitle small bold>
-        This is a bold DisplayTitle small
-      </DisplayTitle>
-      <DisplayTitle small color="reverse">
-        This is a reverse DisplayTitle small
-      </DisplayTitle>
-      <DisplayTitle small color="muted">
-        This is a muted DisplayTitle smalll
-      </DisplayTitle>
+    </>
+  </Story>
+  <Story name="SectionTitle">
+    <>
+      <SectionTitle>This is a SectionTitle</SectionTitle>
+      <SectionTitle bold>This is a bold SectionTitle</SectionTitle>
+      <BackgroundWrapper>
+        <SectionTitle color="reverse">
+          This is a reverse SectionTitle
+        </SectionTitle>
+      </BackgroundWrapper>
+      <SectionTitle color="muted">This is a muted SectionTitle</SectionTitle>
     </>
   </Story>
 </Preview>

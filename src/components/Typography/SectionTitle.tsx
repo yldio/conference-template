@@ -5,18 +5,18 @@ import { Styled, jsx } from 'theme-ui';
 import { modifiers, ModifierProps } from './utils/modifiers';
 
 const DisplayTitle: React.SFC<ModifierProps> = props => (
-  <Styled.h3
+  <Styled.h2
     sx={{
       fontFamily: 'heading',
-      fontSize: [6, 6, 9],
-      lineHeight: ['headingSmall', 'headingSmall', 'heading'],
-      paddingTop: [5, 5, 6],
-      paddingBottom: [5, 5, 4],
+      fontSize: [9, 9, 11],
+      lineHeight: ['headingSmall', 'heading'],
+      paddingTop: [6, 6, 3],
+      paddingBottom: [4, 4, 2],
       ...modifiers(props),
     }}
   >
     {props.children}
-  </Styled.h3>
+  </Styled.h2>
 );
 
 export default DisplayTitle;

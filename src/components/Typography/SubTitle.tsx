@@ -4,7 +4,7 @@ import React from 'react';
 import { Styled, jsx } from 'theme-ui';
 import { modifiers, ModifierProps } from './utils/modifiers';
 
-const BodyPrimary: React.SFC<ModifierProps> = props => (
+const SubTitle: React.SFC<ModifierProps> = props => (
   <Styled.p
     sx={{
       fontFamily: 'body',
@@ -18,4 +18,8 @@ const BodyPrimary: React.SFC<ModifierProps> = props => (
   </Styled.p>
 );
 
-export default BodyPrimary;
+SubTitle.defaultProps = {
+  bold: true,
+};
+
+export default SubTitle;

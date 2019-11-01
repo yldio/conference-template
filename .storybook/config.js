@@ -18,12 +18,6 @@ window.___navigate = pathname => {
 
 addDecorator(withA11y);
 addDecorator(withKnobs);
-addParameters({
-  backgrounds: [
-    { name: 'twitter', value: '#00aced', default: true },
-    { name: 'facebook', value: '#3b5998' },
-  ],
-});
 
 configure(
   require.context('../src', true, /(.*)(\.*)stories\.(js|ts|md)x*/),
