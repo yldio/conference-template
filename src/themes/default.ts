@@ -17,7 +17,22 @@ const headingsDefaults = {
 export default {
   breakpoints: ['375px', '768px', '900px', '1280px'],
   borders: [0, 2],
-  space: [0, 6, 12, 18, 24, 36, 54, 72, 108, 144],
+  space: [
+    0, // 0
+    6, // 1
+    8, // 2
+    10, // 3
+    11, // 4
+    12, // 5
+    13, // 6
+    18, // 7
+    24, // 8
+    36, // 9
+    54, // 10
+    72, // 11
+    108, // 12
+    144, // 13
+  ],
 
   // Colors
   colors: {
@@ -27,13 +42,28 @@ export default {
     secondary: colors.lighterGray,
     accent: colors.darkGray,
     muted: colors.lighterGray,
+    reverse: colors.white,
   },
 
   // Typography
-  fontSizes: [17, 18, 24, 26, 32, 42],
+  fontSizes: [
+    13, // 0
+    15, // 1
+    17, // 2
+    18, // 3
+    21, // 4
+    24, // 5
+    26, // 6
+    30, // 7
+    32, // 8
+    36, // 9
+    42, // 10
+    48, // 11
+  ],
   fonts: {
     body: 'Roboto, sans-serif',
     heading: 'Roboto, sans-serif',
+    mono: 'PT Mono, sans-serif',
   },
   fontWeights: {
     body: 400,
@@ -42,8 +72,12 @@ export default {
   },
 
   lineHeights: {
-    body: 1.5,
-    heading: 1.142,
+    bodySmall: '18px',
+    body: '24px',
+    headingSmall: '30px',
+    heading: '36px',
+    sectionTitleSmall: '36px',
+    sectionTitle: '48px',
   },
 
   // Elements
@@ -51,7 +85,7 @@ export default {
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
-      fontWeigth: 'body',
+      fontWeight: 'body',
       color: 'primary',
       m: 0,
       p: 0,
