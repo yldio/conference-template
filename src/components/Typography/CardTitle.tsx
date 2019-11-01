@@ -10,8 +10,8 @@ const CardTitle: React.SFC<ModifierProps> = props => (
       fontFamily: 'heading',
       fontSize: [4, 4, 6],
       lineHeight: ['body', 'body', 'headingSmall'],
-      paddingTop: [2, 3, 3],
-      paddingBottom: [3, 3, 4],
+      paddingTop: [4, 4, 5],
+      paddingBottom: [6, 6, 5],
       ...modifiers(props),
     }}
   >
