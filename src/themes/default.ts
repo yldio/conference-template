@@ -175,4 +175,28 @@ export default {
       cursor: 'pointer',
     },
   },
+  forms: {
+    label: {
+      fontSize: 1,
+      fontWeight: 'bold',
+    },
+    input: {
+      border: `2px solid ${colors.darkGray}`,
+      paddingY: 16,
+      paddingX: 24,
+      marginBottom: 36,
+      borderRadius: 0,
+    },
+    checkbox: {
+      width: 24,
+      height: 24,
+      minWidth: 24,
+      minHeight: 24,
+      border: `2px solid ${colors.darkGray}`,
+      marginRight: 9,
+      marginLeft: 0,
+      position: 'relative',
+      cursor: 'pointer',
+    },
+  },
 };
