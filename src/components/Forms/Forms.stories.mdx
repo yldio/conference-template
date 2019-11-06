@@ -1,10 +1,4 @@
-import {
-  Meta,
-  Story,
-  Preview,
-  Props,
-  Description,
-} from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { text, addDecorator } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import StorybookTheme from '../../themes/storybook';
@@ -18,14 +12,14 @@ import { Box, Input, Label, Checkbox } from '@theme-ui/components';
 <Preview withToolbar isColumn>
   <Story name="Text Input">
     <>
-      <Box sx={{ fontFamily: 'roboto' }} as="form">
+      <Box as="form">
         <Input name="text-input" placeholder="text input" />
       </Box>
     </>
   </Story>
   <Story name="Password Input">
     <>
-      <Box sx={{ fontFamily: 'roboto' }} as="form">
+      <Box as="form">
         <Input
           type="password"
           name="password-input"
@@ -36,14 +30,17 @@ import { Box, Input, Label, Checkbox } from '@theme-ui/components';
   </Story>
   <Story name="Checkbox">
     <>
-      <Box sx={{ fontFamily: 'roboto' }} as="form">
-        <Checkbox />
+      <Box as="form">
+        <Label>
+          <Checkbox />
+          Label
+        </Label>
       </Box>
     </>
   </Story>
   <Story name="Label">
     <>
-      <Box sx={{ fontFamily: 'roboto' }} as="form">
+      <Box as="form">
         <Label>Label</Label>
       </Box>
     </>
