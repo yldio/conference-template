@@ -1,0 +1,54 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { text, addDecorator } from '@storybook/addon-knobs/react';
+import { action } from '@storybook/addon-actions';
+import StorybookTheme from '../../themes/storybook';
+import { Box, Input, Label, Checkbox } from '@theme-ui/components';
+
+<Meta
+  title="Atoms|Forms"
+  decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
+/>
+
+# Form Components
+
+Form components are imported directly from the `@theme-ui/components` library.
+
+They are styled using the theme e.g. `src/themes/default.ts`
+
+<Preview withToolbar isColumn>
+  <Story name="Text Input">
+    <>
+      <Box as="form">
+        <Input name="text-input" placeholder="text input" />
+      </Box>
+    </>
+  </Story>
+  <Story name="Password Input">
+    <>
+      <Box as="form">
+        <Input
+          type="password"
+          name="password-input"
+          placeholder="password input"
+        />
+      </Box>
+    </>
+  </Story>
+  <Story name="Checkbox">
+    <>
+      <Box as="form">
+        <Label>
+          <Checkbox />
+          Label
+        </Label>
+      </Box>
+    </>
+  </Story>
+  <Story name="Label">
+    <>
+      <Box as="form">
+        <Label>Label</Label>
+      </Box>
+    </>
+  </Story>
+</Preview>
