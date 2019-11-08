@@ -1,10 +1,12 @@
 const colors = {
   white: '#fff',
-  lighterGray: '#d8d8d8',
-  lightGray: '#757575',
+  lighterGray: '#f9f9f9',
+  lightGray: '#d8d8d8',
   neutralGray: '#828282',
+  mediumGray: '#757575',
   darkGray: '#404040',
   darkerGray: '#333',
+  neonGreen: '#65FFCD',
 };
 
 const headingsDefaults = {
@@ -39,10 +41,12 @@ export default {
     text: colors.darkGray,
     background: colors.white,
     primary: colors.darkGray,
-    secondary: colors.lighterGray,
+    secondary: colors.lightGray,
     accent: colors.darkGray,
-    muted: colors.lighterGray,
+    muted: colors.lightGray,
     reverse: colors.white,
+    linkHover: colors.lighterGray,
+    linkActive: colors.neonGreen,
   },
 
   // Typography
@@ -69,6 +73,7 @@ export default {
     body: 400,
     heading: 500,
     bold: 500,
+    styledLink: 700,
   },
 
   lineHeights: {

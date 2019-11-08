@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Description,
+} from '@storybook/addon-docs/blocks';
+import { text, addDecorator } from '@storybook/addon-knobs/react';
+import { action } from '@storybook/addon-actions';
+import StorybookTheme from '../../themes/storybook';
+import StyledLink from './StyledLink';
+import BackgroundWrapper from '../utils/BackgroundWrapper';
+
+<Meta
+  title="Atoms|StyledLink"
+  decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
+/>
+
+<Preview withToolbar isColumn>
+  <Story name="StyledLink">
+    <>
+      <StyledLink>This is a StyledLink</StyledLink>
+      <br />
+      <StyledLink color="muted">This is a muted StyledLink</StyledLink>
+      <br />
+      <BackgroundWrapper>
+        <StyledLink color="reverse">This is a reverse StyledLink</StyledLink>
+      </BackgroundWrapper>
+    </>
+  </Story>
+</Preview>
