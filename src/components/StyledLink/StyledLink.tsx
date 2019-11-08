@@ -19,19 +19,19 @@ const StyledLink: React.FC<StyledLinkProps> = ({
     target="_blank"
     rel="noopener noreferrer"
     sx={{
+      color,
+      lineHeight: 'body',
+      fontWeight: 'styledLink',
+    }}
+    css={{
       paddingY: '8px',
       paddingX: '6px',
       marginBottom: '24px',
       marginLeft: '-6px',
-      lineHeight: '24px',
-      color,
-      fontWeight: 'styledLink',
       position: 'relative',
       display: 'inline-block',
       transition: 'background 200ms ease-out 0s',
       cursor: 'pointer',
-    }}
-    css={{
       ':after': {
         content: '""',
         display: 'block',
