@@ -45,7 +45,7 @@ export default {
     accent: colors.darkGray,
     muted: colors.lightGray,
     reverse: colors.white,
-    linkHover: colors.lighterGray,
+    linkHover: colors.neonGreen,
     linkActive: colors.neonGreen,
   },
 

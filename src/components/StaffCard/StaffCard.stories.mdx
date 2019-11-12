@@ -1,0 +1,23 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Description,
+} from '@storybook/addon-docs/blocks';
+import { text, addDecorator } from '@storybook/addon-knobs/react';
+import StorybookTheme from '../../themes/storybook';
+import StaffCard from './StaffCard';
+
+<Meta
+  title="Atoms|StaffCard"
+  decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
+/>
+
+<Preview withToolbar isColumn>
+  <Story name="StaffCard">
+    <>
+      <StaffCard>This is a StaffCard</StaffCard>
+    </>
+  </Story>
+</Preview>

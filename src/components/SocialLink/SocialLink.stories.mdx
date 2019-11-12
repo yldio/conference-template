@@ -1,0 +1,23 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Description,
+} from '@storybook/addon-docs/blocks';
+import { text, addDecorator } from '@storybook/addon-knobs/react';
+import StorybookTheme from '../../themes/storybook';
+import SocialLink from './SocialLink';
+
+<Meta
+  title="Atoms|SocialLink"
+  decorators={[storyFn => <StorybookTheme storyFn={storyFn} />]}
+/>
+
+<Preview withToolbar isColumn>
+  <Story name="SocialLink">
+    <>
+      <SocialLink>This is a SocialLink</SocialLink>
+    </>
+  </Story>
+</Preview>
